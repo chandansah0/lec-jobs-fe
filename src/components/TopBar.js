@@ -3,7 +3,7 @@ class TopBar extends Component{
     render() {
         return(  <div className="post-topbar">
         <div className="user-picy">
-          <img src="./images/saroj-pic.jpeg" alt="" />
+          <img src="./images/chandan-pic.png" alt="" />
         </div>
         <div className="post-st">
           <ul>
