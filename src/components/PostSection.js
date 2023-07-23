@@ -16,7 +16,7 @@ class PostSection extends Component {
         that.setState({ posts: data });
       })
       .catch((err) => {
-        console.error(err);
+        console.error(err)
       });
   }
 
