@@ -27,7 +27,12 @@ class Home extends Component {
     };
   }
   componentDidMount() {
-    fetch("http://localhost:5001/api/v1/user")
+    fetch("http://localhost:5001/api/v1/user", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+    } )
     .then((resp) => resp.json())
     .then ((data) => {
       this.setState({ user: data });
