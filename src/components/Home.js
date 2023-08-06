@@ -20,31 +20,31 @@ const userData = {
 };
 
 class Home extends Component {
-  constructor() {
-    super();
-    this.state={
-      user:{},
-    };
-  }
-  componentDidMount() {
-    fetch("http://localhost:5001/api/v1/user", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-    } )
-    .then((resp) => resp.json())
-    .then ((data) => {
-      this.setState({ user: data });
-    })
-    .catch((err) => {
-      console.error(err);
-    });
-  }
+  // constructor() {
+  //   super();
+  //   this.state={
+  //     user:{},
+  //   };
+  // }
+  // componentDidMount() {
+  //   fetch("http://localhost:5001/api/v1/user", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json"
+  //     },
+  //   } )
+  //   .then((resp) => resp.json())
+  //   .then ((data) => {
+  //     this.setState({ user: data });
+  //   })
+  //   .catch((err) => {
+  //     console.error(err);
+  //   });
+  // }
   render() {
-    //const user = this.state.user;
-    const user = { ...this.state.user };
-      //const{user} = this.state;
+    const user = this.props.user;
+    // const user = { ...this.props.user };
+      //const{user} = this.props;
       if (!Object.keys(user).length) {
         return <></>;
       }
